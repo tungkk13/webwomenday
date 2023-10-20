@@ -105,7 +105,6 @@ h1 {
 }
 
 h2 {
-    font-family: 'Courier New', Courier, monospace, 'Arial Narrow', Arial, sans-serif;
     font-style: italic;
     text-align: center;
     letter-spacing: 0.1px;
@@ -118,21 +117,42 @@ h2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 25px;
-    padding-left: 50px;
-    padding-right: 30px;
+    padding-left: 80px;
+    padding-right: 70px;
 }
 
 .image-grid img {
     max-width: 90%;
     height: auto;
-    border: 5px solid #fda3b1;
+    border: 6px solid #fda3b0cd;
     margin-bottom: 20px;
-    box-shadow: 0px 5px 12px #a15e67;
-    border-radius: 15px;
+    box-shadow: 0px 10px 12px #a15e67;
+    border-radius: 20px;
     transition: all 1s;
 }
 
 .image-grid img:hover,
 .image-grid img:active {
-    transform: scale(1.5);
+    transform: scale(1.7);
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    40% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+
+.main_head_page {
+    animation: fadeIn 1.3s ease-in-out;
+}
+
+.fade-in {
+    opacity:0;
+    transition: opacity 2s;
+    visibility: hidden;
+}
+
+.fade-in.visible {
+    opacity:1;
+    visibility: visible;
 }
