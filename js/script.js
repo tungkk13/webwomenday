@@ -39,31 +39,9 @@ window.onload = function () {
         body.style.overflow = "hidden";
     }
     window.scrollTo(0, 0);
-
-    if (sessionStorage.getItem("loichucVisible") === "true") {
-        document.getElementById("loichuc").classList.add("visible");
-    }
-    if (sessionStorage.getItem("endVisible") === "true") {
-        document.getElementById("end_type").classList.add("visible");
-    }
-    if (sessionStorage.getItem("khoeanhVisible") === "true") {
-        document.getElementById("khoeanh").classList.add("visible");
-    }
-    var imgElements = document.querySelectorAll("img.fade-in, khoeanh");
-    for (var i = 0; i < imgElements.length; i++) {
-        if (sessionStorage.getItem("img" + i + "Visible") === "true") {
-            imgElements[i].classList.add("visible");
-        }
-    }
 }
 
 window.onbeforeunload = function () {
     sessionStorage.removeItem("allowScroll");
-    sessionStorage.removeItem("loichucVisible");
-    sessionStorage.removeItem("endVisible");
-    sessionStorage.removeItem("khoeanhVisible");
-    var imgElements = document.querySelectorAll("img.fade-in, khoeanh");
-    for (var i = 0; i < imgElements.length; i++) {
-        sessionStorage.removeItem("img" + i + "Visible");
-    }
+    window.location.href = "https://tungkk13.github.io/webwomenday/";
 }
